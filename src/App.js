@@ -13,7 +13,7 @@ function App() {
     APPOINTMENTS: "/appointments",
   };
 
-  function handleContactSubmit(name, phone, mail) {
+  function addContact(name, phone, mail) {
     console.log('You clicked submit contact.');
     
     const newContact = {
@@ -27,7 +27,7 @@ function App() {
     });
   }
 
-  function handleAppointmentSubmit(title, contact, date, time) {
+  function addAppointment(title, contact, date, time) {
     console.log('You clicked submit appointment.');
     
     const newAppointment = {
@@ -58,10 +58,10 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-            <ContactsPage contacts={contacts} handleContactSubmit={handleContactSubmit}/>
+            <ContactsPage contacts={contacts} addContact={addContact}/>
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            <AppointmentsPage appointments={appointments} handleAppointmentSubmit={handleAppointmentSubmit}/>
+            <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/>
           </Route>
         </Switch>
       </main>
