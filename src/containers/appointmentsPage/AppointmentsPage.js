@@ -26,7 +26,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList appointments={appointments}/>
+        {/* <TileList appointments={appointments}/> */}
       </section>
     </div>
   );
