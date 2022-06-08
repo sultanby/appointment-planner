@@ -13,17 +13,17 @@ function App() {
     APPOINTMENTS: "/appointments",
   };
 
-  function addContact(name, phone, mail) {
+  function addContact(name, phone, email) {
     console.log('You clicked submit contact.');
     
     const newContact = {
       name: name,
       phone: phone,
-      mail: mail,
+      email: email,
     };
 
     setContacts(prev => {
-      return {...prev, newContact}
+      return [...prev, newContact]
     });
   }
 
@@ -38,7 +38,7 @@ function App() {
     };
 
     setAppointments(prev => {
-      return {...prev, newAppointment}
+      return [...prev, newAppointment]
     });
   }
 
