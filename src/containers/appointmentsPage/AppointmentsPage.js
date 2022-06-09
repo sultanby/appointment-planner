@@ -15,7 +15,6 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
     setContact('');
     setDate('');
     setTime('');
-    console.log(appointments);
   };
 
   return (
