@@ -25,7 +25,7 @@ function App() {
     setContacts(prev => {
       return [...prev, newContact]
     });
-  }
+  };
 
   function addAppointment(title, contact, date, time) {
     console.log('You clicked submit appointment.');
@@ -40,7 +40,7 @@ function App() {
     setAppointments(prev => {
       return [...prev, newAppointment]
     });
-  }
+  };
 
   return (
     <>

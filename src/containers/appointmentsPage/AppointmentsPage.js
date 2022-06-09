@@ -10,23 +10,24 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addAppointment({title, contact, date, time});
+    addAppointment(title, contact, date, time);
     setTitle('');
     setContact('');
     setDate('');
     setTime('');
+    console.log(appointments);
   };
 
   return (
     <div>
       <section>
         <h2>Add Appointment</h2>
-        <AppointmentForm title={title} contact={contact} date={date} time={time} setTitle={setTitle} setContact={setContact} sertDate={setDate} setTime={setTime} handleSubmit={handleSubmit}/>
+        <AppointmentForm contacts={contacts} title={title} contact={contact} date={date} time={time} setTitle={setTitle} setContact={setContact} setDate={setDate} setTime={setTime} handleSubmit={handleSubmit}/>
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
-        {/* <TileList appointments={appointments}/> */}
+        <TileList tile={appointments}/>
       </section>
     </div>
   );

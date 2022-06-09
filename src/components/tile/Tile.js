@@ -1,11 +1,11 @@
 import React from "react";
 
-export const Tile = ({contact}) => {
+export const Tile = ({data}) => {
   return (
     <div className="tile-container">
-      {Object.values(contact).map((data, index) => (
+      {Object.values(data).map((element, index) => (
         <p key={index} className={`${index===0 ? 'tile-title' : ''} tile`}>
-          {data}
+          {element}
         </p>
       ))}
     </div>
